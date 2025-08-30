@@ -11,3 +11,5 @@ imagem_fundo1 = pygame.image.load("Menu - Estilhaços Vesperianos.png")
 lado = 0
 alto = 0
 
+def desenharFundo():
+    tela.blit(imagem_fundo1, (0,0))
