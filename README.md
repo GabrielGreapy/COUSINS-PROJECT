@@ -1,2 +1,2 @@
 # COUSINS-PROJECT
-Um projeto de uma semana de dois primos programadores.
+Um projeto de uma semana de dois primos programadores com a biblioteca pygame.
