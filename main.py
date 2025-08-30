@@ -4,7 +4,7 @@ from sys import exit
 
 relogio = pygame.time.Clock()
 
-cenario1 = pygame.image.load("Menu_-_Estilhaços_Vesperianos.png")
+menu = pygame.image.load("Menu_-_Estilhaços_Vesperianos.png")
 
 imagem_fundo1 = pygame.image.load("Menu_-_Estilhaços_Vesperianos.png")
 
@@ -12,12 +12,13 @@ lado = 0
 alto = 0
 
 def desenharFundo():
-    tela.blit(imagem_fundo1, (0,0))
+    fundo_escalado = pygame.transform.scale(menu, (telargura, telaltura))
+    tela.blit(fundo_escalado, (0,0))
 
 pygame.init()
 
-telargura = 1024
-telaltura = 1024
+telargura = 975
+telaltura = 675
 
 fontexto = pygame.font.SysFont("arial", 30, False, False)
 
