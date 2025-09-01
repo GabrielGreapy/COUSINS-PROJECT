@@ -2,6 +2,15 @@ import pygame
 from pygame.locals import *
 from sys import exit
 
+
+# import
+
+
+from NPCs.Vesperianos.verdinhos import Verdinho
+
+
+# imports
+
 relogio = pygame.time.Clock()
 
 menu = pygame.image.load("Menu_-_Estilhaços_Vesperianos.png")
