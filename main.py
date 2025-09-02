@@ -16,7 +16,7 @@ def desenharFundo(cenarios_de_fundo):
     tela.blit(fundo_escalado, (0,0))
 
 def textomenu(texto, tamanho, cor, x, y):
-    fonte_objeto = pygame.font.SysFont("arial", tamanho, False, False)
+    fonte_objeto = pygame.font.SysFont("silkscreen", tamanho, False, False)
     texto_imagem = fonte_objeto.render(texto, True, cor)
     texto_rect = texto_imagem.get_rect()
     texto_rect.midtop = (x, y)
@@ -41,7 +41,7 @@ while True:
     if estado_jogo == "Menu":
         tela.fill((0,0,0))
         desenharFundo(menu)
-        textomenu("Jogar", 40, "white", 100, 499)
+        textomenu("JOGAR", 50, "white", 100, 499)
         if event.type == KEYUP:
             estado_jogo = "Jogando"
     elif estado_jogo == "Jogando":
