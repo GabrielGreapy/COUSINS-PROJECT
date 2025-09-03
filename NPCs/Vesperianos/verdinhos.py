@@ -11,7 +11,7 @@ class Verdinho:
         #self.retangulo = pygame.Rect(self.x, self.y, self.imagem.get_width(), self.imagem.get_height())
         #self.retangulo.center = (self.x, self.y)
 
-        # self.image.fill = ((0, 200, 0)) # Error
+        self.image.fill((0, 200, 0))
 
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
@@ -22,7 +22,7 @@ class Verdinho:
     def update(self):
         if self.direcao == "direita":
             self.rect.x += self.velocidade
-            if self.rect.right <= self.limite_direita:
+            if self.rect.right >= self.limite_direita:
                 self.direcao = "esquerda"
         elif self.direcao == "esquerda":
             self.rect.x += self.velocidade
