@@ -1,15 +1,12 @@
+# Marcação: imports
+
 import pygame
 from pygame.locals import *
 from sys import exit
-
-
-# import
-
-
 from NPCs.Vesperianos.verdinhos import Verdinho
+from NPCs.Protagonista.jax import Hero
 
-
-# imports
+# Marcação: imports
 
 relogio = pygame.time.Clock()
 
@@ -39,6 +36,9 @@ telaltura = 675
 tela = pygame.display.set_mode((telargura, telaltura))
 pygame.display.set_caption("Estilhaços Vesperianos")
 
+Jax = Hero(200, 500, "Jax", 100, 10, True, False)
+Berilima = Verdinho(400, 420, 100, 200)
+
 estado_jogo = "Menu"
 
 while True:
@@ -59,6 +59,15 @@ while True:
         tela.fill((0,0,0))
         desenharFundo(imagem_fundo1)
         textomenu("O Jogo Começou!", 60, "yellow", telargura / 2, telaltura / 2)
-        
+        Jax.desenho(tela)
+        Berilima.spawnar(tela)
+        pygame.draw.rect(tela, (0, 200, 0), (900, 400, 50, 70))
+        for event in pygame.event.get():
+            if pygame.key.get_pressed()[K_j]:
+                Jax.miralado()
+            if event.type == KEYDOWN:
+                if event.key == K_k:
+                    Jax.atira()
+                    Jax.atualiza()
     
     pygame.display.update()
